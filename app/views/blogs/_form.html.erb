@@ -1,0 +1,33 @@
+
+  <%= form_with(model: @blog, local: true ,url: choose_new_or_edit ) do |form| %>
+    <% if @blog.errors.any? %>
+      <div class="container">
+        <div class="alert alert-danger" role="alert">
+          <%= @blog.errors.count %>件のエラーがあります。
+        </div>
+        <ul>
+          <% @blog.errors.full_messages.each do |msg| %>
+            <div class=alert_msg>
+              <li><%= msg %></li>
+            </div>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+  <div class="title">
+    タイトル
+  </div>
+  <div class=text_title>
+    <%= form.text_field :title, size:"100px" %>
+  </div>
+  <div class="content">
+    本文
+  </div>
+  <div class=text_area>
+    <%= form.text_area :content, size:"100pxx30px" %>
+  </div>
+  <div class=square_btn>
+    <%= form.submit %>
+  </div>
+<% end %>

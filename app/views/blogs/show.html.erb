@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="description">
+    <h1>ブログ画面詳細</h1>
+  </div>
+  <div class="title">タイトル</div>
+  <div class="title_text">
+    <%= @blog.title %>
+  </div>
+  <div class="content">本文</div>
+  <div class="content_text">
+    <%= @blog.content %>
+  </div>
+  <%= form_with(model: @blog, url: new_blog_path, local: true, method: 'get') do |form| %>
+    <%= form.hidden_field :title %>
+    <%= form.hidden_field :content %>
+  <% end %>
+</div>

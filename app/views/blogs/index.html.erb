@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="description">
+    <h1>過去のブログ一覧</h1>
+  </div>
+
+  <p>新しくブログを書く</p>
+  <a><%= link_to 'TRY !!', new_blog_path %></a>
+
+  <div class="past_blog_list">
+    <div class="row">
+      <% @blog.each do |blog| %>
+        <nav class="col-md-4">
+          <ul class="blog-panel">
+            <div class="blog_title_index">タイトル</div>
+            <div class="blog_title_index2"><%= blog.title %></div>
+            <div class="blog_content_index">本文</div>
+            <div class="blog_content_index2"><%= blog.content %></div>
+          </ul>
+
+          <div class="btn-group" role="group" aria-label="...">
+            <button type="button" class="btn btn-default"><%= link_to 'Show', blog %></button>
+            <button type="button" class="btn btn-default"><%= link_to 'Edit', edit_blog_path(blog) %></button>
+            <button type="button" class="btn btn-default"><%= link_to 'Destroy', blog, method: :delete, data: { confirm: '本当に消していい?' } %></button>
+          </div>
+        </nav>
+      <% end %>
+    </div>
+  </div>
+</div>

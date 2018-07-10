@@ -1,0 +1,20 @@
+<img src="/images/bbq.png" class="bbq" />
+<div class="try_index">
+  <p>
+    せっかく旅行にいったんだから！せっかく仕事頑張ったんだから！<br>
+    忘れないうちにブログを書こう、みんなに報告しよう！
+  </p>
+  <a>
+    <% flash.each do |key, value| %>
+      <%= content_tag(:div, value, class: "#{key}") %>
+    <% end %>
+
+    <% if logged_in? %>
+      <%= link_to "Profile", user_path(current_user.id) %>
+      <%= link_to "Logout", session_path(current_user.id), method: :delete %>
+    <% else %>
+      <%= link_to "Sign up", new_user_path %>
+      <%= link_to "Login", new_session_path %>
+    <% end %>
+  </a>
+</div>

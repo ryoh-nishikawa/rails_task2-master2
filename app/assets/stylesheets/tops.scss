@@ -1,0 +1,78 @@
+div.container {
+  height: auto !important;
+  position: relative;
+  padding: 0 0 150px 0;
+  width: 100%;
+  background-color: #fffaf0;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  background-color: #008080;
+  height: 150px;
+  padding: auto;
+  z-index: 999;
+  color: white;
+}
+
+div.header_text1 a{
+  margin-top: 25px;
+  text-align: center;
+  font-size: 4vw;
+  color: white;
+}
+
+div.header_text2 a{
+  margin-top: 30px;
+  text-align: left;
+  font-size: 2.5vw;
+  color: white;
+  text-decoration: none;
+}
+
+div.header_text3 a{
+  margin-top: 25px;
+  text-align: center;
+  font-size: 2.5vw;
+  color: white;
+}
+
+div.header_text4 a{
+  margin-top: 25px;
+  text-align: center;
+  font-size: 2.5vw;
+  color: white;
+}
+
+header :after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+footer {
+  position: absolute;
+  width: 100%;
+  background-color: #008080;
+  padding: 20px 0 0 0;
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+  bottom: 0;
+  height: 150px;
+}
+
+footer p {
+  font-size: 20px;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  text-align: center;
+  border-image: url("bg_dot.png") 15 round;
+}

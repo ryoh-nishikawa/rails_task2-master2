@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="description">
+    <h1>ブログ編集</h1>
+  </div>
+  <%= form_with(model: @blog, local: true) do |form| %>
+    <% if @blog.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= @blog.errors.count %>件のエラーがあります。</h2>
+        <ul>
+
+        <% @blog.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="title">
+      タイトル
+    </div>
+    <div class=text_title>
+      <%= form.text_field :title, size:"100px" %>
+    </div>
+    <div class="content">
+      本文
+    </div>
+    <div class=text_area>
+    <%= form.text_area :content, size:"100pxx50px" %>
+  </div>
+    <div class=square_btn>
+      <%= form.submit %>
+    </div>
+  <% end %>
+</div>

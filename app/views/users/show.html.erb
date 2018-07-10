@@ -1,0 +1,9 @@
+<div class="description">
+  <h1><%= @user.name %>のページ</h1>
+</div>
+<p>メールアドレス: <%= @user.email %></p>
+
+<p>過去のブログをみる</p>
+<a><%= link_to 'ブログ一覧へ', blogs_index_path %></a>
+<p>新しくブログを書く</p>
+<a><%= link_to 'TRY !!', new_blog_path %></a>
