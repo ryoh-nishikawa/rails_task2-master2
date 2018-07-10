@@ -25,3 +25,4 @@ Things you may want to cover:
 # rails_task2
 # bootstrap2
 # rails_task2-master
+# rails_task2-master2
