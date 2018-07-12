@@ -7,3 +7,13 @@
 <a><%= link_to 'ブログ一覧へ', blogs_index_path %></a>
 <p>新しくブログを書く</p>
 <a><%= link_to 'TRY !!', new_blog_path %></a>
+
+<p>お気に入りブログ</p>
+<!--
+<% @favorites_blogs.each do |f_blog| %>
+  <p>名前：<%= f_blog.user.name %>さん</p>
+  <p>タイトル：<%= f_blog.title %></p>
+  <p>内容：<%= f_blog.content %></p>
+  <%= link_to 'お気に入り解除する', favorite_path(blog_id: @favorites_blogs.id), method: :delete, class: 'btn btn-danger' %>
+<% end %>
+-->

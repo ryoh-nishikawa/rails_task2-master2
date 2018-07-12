@@ -11,6 +11,7 @@
       <% @blog.each do |blog| %>
         <nav class="col-md-4">
           <ul class="blog-panel">
+            <div class="blog_title_index"><%= blog.user.name %>さん</div>
             <div class="blog_title_index">タイトル</div>
             <div class="blog_title_index2"><%= blog.title %></div>
             <div class="blog_content_index">本文</div>

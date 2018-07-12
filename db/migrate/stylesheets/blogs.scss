@@ -3,12 +3,8 @@ div.description {
 }
 
 /*　button~　*/
-div.favorites {
-  margin:  5% 40% 5% 40%;
-  padding: 0.5em 1em;
-}
 
-div.square_btn {
+div.square_btn{
   display: inline-block;
   padding: 0.5em 1em;
   text-decoration: none;
@@ -25,11 +21,6 @@ div.square_btn:active {/*ボタンを押したとき*/
   border-bottom: none;
   margin:  5% 45% 5% 45%;
 }
-
-div.square_btn a, div.square_btn:activea {
-  color: white;
-}
-
 /*　button~　*/
 h1 {
   margin-top: 2vw;
