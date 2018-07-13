@@ -8,4 +8,9 @@ class FavoritesController < ApplicationController
     favorite = current_user.favorites.find_by(id: params[:id]).destroy
     redirect_to blogs_url, notice: "#{favorite.blog.user.name}さんのブログをお気に入り解除しました"
   end
+
+  def show
+    @user = User.find(params[:id])
+    @favorite_blogs = @user.favorite_blogs
+  end
 end

@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   root to: 'tops#top'
   get '/blogs/index', to: 'blogs#index'
+  get '/favorites/show', to: 'favorites#show'
 
   resources:blogs do
     collection do

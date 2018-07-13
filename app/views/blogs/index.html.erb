@@ -18,10 +18,13 @@
             <div class="blog_content_index2"><%= blog.content %></div>
           </ul>
 
+
           <div class="btn-group" role="group" aria-label="...">
             <button type="button" class="btn btn-default"><%= link_to 'Show', blog %></button>
-            <button type="button" class="btn btn-default"><%= link_to 'Edit', edit_blog_path(blog) %></button>
-            <button type="button" class="btn btn-default"><%= link_to 'Destroy', blog, method: :delete, data: { confirm: '本当に消していい?' } %></button>
+            <% if blog.user_id == current_user.id %>
+              <button type="button" class="btn btn-default"><%= link_to 'Edit', edit_blog_path(blog) %></button>
+              <button type="button" class="btn btn-default"><%= link_to 'Destroy', blog, method: :delete, data: { confirm: '本当に消していい?' } %></button>
+            <% end %>
           </div>
         </nav>
       <% end %>
