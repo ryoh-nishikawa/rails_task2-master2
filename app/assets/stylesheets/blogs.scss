@@ -109,6 +109,24 @@ div.blog_content_index2 {
   overflow: hidden;
 }
 
+div.tblog_title_show, div.tblog_content_show {
+  text-align: left;
+  color: #696969;
+  font-size: 25px;
+}
+
+div.tblog_title_show2 {
+  background-color: #ffdab9;
+  border: solid 5px #ff7f50;
+  font-size: 23px;
+}
+
+div.tblog_content_show2 {
+  border: solid 5px;
+  border-color: #d3d3d3;
+  font-size: 20px;
+}
+
 ul.blog-panel {
   height: 200px;
   margin: 50px 0;

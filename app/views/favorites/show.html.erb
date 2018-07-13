@@ -3,13 +3,23 @@
     <h1>お気に入り一覧</h1>
   </div>
 
-  <% if @favorite_blogs.present? %>
-    <div>
-      <% @favorite_blogs.each do |t| %>
-        <p>名前：<%= t.user.name %>さん</p>
-        <p>タイトル：<%= t.title %></p>
-        <p>内容：<%= t.content %></p>
+  <div class="past_blog_list">
+    <div class="row">
+      <% if @favorite_blogs.present? %>
+        <% @favorite_blogs.each do |t| %>
+          <nav class="col-md-6">
+
+            <ul class="blog-panel">
+              <div class="tblog_title_show">名前：<%= t.user.name %>さん</div>
+              <div class="tblog_title_show">タイトル</div>
+              <div class="tblog_title_show2"><%= t.title %></div>
+              <div class="tblog_content_show">内容</div>
+              <div class="tblog_content_show2"><%= t.content %></div>
+            </ul>
+
+          </nav>
+        <% end %>
       <% end %>
     </div>
-  <% end %>
+  </div>
 </div>
