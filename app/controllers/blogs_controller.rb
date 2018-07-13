@@ -57,7 +57,7 @@ class BlogsController < ApplicationController
   end
 
   def user_id
-    @user_id = current_user.id.find(params[:id])
+    @user_id = current_user.id.find(session[:user_id])
   end
 
   private
