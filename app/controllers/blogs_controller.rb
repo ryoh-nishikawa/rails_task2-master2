@@ -49,7 +49,6 @@ class BlogsController < ApplicationController
 
   def confirm
     @blog = Blog.new(blog_params)
-    @blog.user_id = current_user.id
   end
 
   def current_user
@@ -57,7 +56,7 @@ class BlogsController < ApplicationController
   end
 
   def user_id
-    @user_id = current_user.id.find(session[:user_id])
+    @user_id = current_user.id.find(params[:id])
   end
 
   private
