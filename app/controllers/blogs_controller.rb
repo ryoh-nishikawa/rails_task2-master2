@@ -15,6 +15,11 @@ class BlogsController < ApplicationController
     end
   end
 
+  def confirm
+    @blog = Blog.new(blog_params)
+    @blog.user_id = current_user.id
+  end
+
   def create
     @blog = Blog.new(blog_params)
     @blog.user_id = current_user.id
@@ -45,10 +50,6 @@ class BlogsController < ApplicationController
   def destroy
     @blog.destroy
     redirect_to blogs_path,notice:"ブログを削除しました！"
-  end
-
-  def confirm
-    @blog = Blog.new(blog_params)
   end
 
   def current_user
